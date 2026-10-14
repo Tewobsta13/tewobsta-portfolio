@@ -64,6 +64,7 @@ const techGroups = [
       { name: "SQL", icon: Database },
       { name: "MongoDB", icon: Database },
       { name: "Python", icon: Code2 },
+      { name: "Git", icon: GitBranch },
     ],
   },
 ];
