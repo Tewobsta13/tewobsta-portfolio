@@ -1874,10 +1874,65 @@ const CSS = `
 .fr-how { margin: 10px 0 0; font-size: clamp(18px, 1.55cqw, 21px); line-height: 1.55; color: var(--fr-ivory); }
 .fr-keys { margin: 12px 0 0; font-size: 17px; line-height: 1.8; color: var(--fr-muted); }
 .fr-keys kbd { padding: 2px 9px; border: 1px solid var(--fr-line); border-bottom-width: 3px; border-radius: 7px; background: var(--fr-panel); font: 700 15px system-ui, sans-serif; color: var(--fr-ivory); }
-@container (max-width: 819px) {
-  .fr-top { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 22px 18px 20px; }
-  .fr-h { font-size: clamp(38px, 11cqw, 62px); }
-  .fr-info { padding-left: 14px; }
+/* Responsive game introduction */
+.fr-top {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  padding: 24px clamp(14px, 4vw, 28px);
+}
+
+.fr-h {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: clamp(34px, 8vw, 62px);
+  line-height: 1;
+}
+
+.fr-info {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 14px;
+}
+
+.fr-sub,
+.fr-how,
+.fr-keys {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .fr-top {
+    gap: 12px;
+    padding: 20px 14px;
+  }
+
+  .fr-h {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .fr-sub {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .fr-how {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .fr-keys {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .fr-keys kbd {
+    display: inline-block;
+    margin: 2px 1px;
+    padding: 2px 6px;
+    font-size: 13px;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .faith-run *, .faith-run *::before, .faith-run *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .001ms !important; }
@@ -2016,5 +2071,42 @@ const CSS = `
   .fr-scene { opacity: .95; }
   .fr-amb, .fr-mote, .fr-flash { display: none; }
   .fr-sky::after, .fr-moon, .fr-progress > div, .fr-btn { transition: none; }
+}
+  /* Mobile responsiveness for game instructions */
+@media (max-width: 560px) {
+  .faith-run .fr-info {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    border-left-width: 2px;
+  }
+
+  .faith-run .fr-sub {
+    font-size: 19px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+  }
+
+  .faith-run .fr-how {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+
+  .faith-run .fr-keys {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.9;
+    overflow-wrap: break-word;
+  }
+
+  .faith-run .fr-keys kbd {
+    display: inline-block;
+    margin: 2px 1px;
+    padding: 2px 6px;
+    font-size: 13px;
+  }
 }
 `;
