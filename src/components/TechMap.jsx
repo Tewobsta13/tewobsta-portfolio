@@ -19,6 +19,7 @@ import {
   Sparkles,
   Workflow,
   Blocks,
+  Coffee,
 } from "lucide-react";
 
 const techGroups = [
@@ -34,6 +35,7 @@ const techGroups = [
       { name: "Next.js", icon: Globe },
     ],
   },
+
   {
     title: "Backend",
     icon: Server,
@@ -44,6 +46,17 @@ const techGroups = [
       { name: "Flask", icon: Blocks },
     ],
   },
+
+  {
+    title: "Languages",
+    icon: Code2,
+    technologies: [
+      { name: "Java", icon: Coffee },
+      { name: "C++", icon: Code2 },
+      { name: "C#", icon: Code2 },
+    ],
+  },
+
   {
     title: "Data & Tools",
     icon: Database,
