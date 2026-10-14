@@ -47,9 +47,9 @@ export default function Hero() {
             a.m. and I’m negotiating with a bug that I’m pretty sure is
             personal. I wouldn’t trade it.
             <span className="mt-4 block font-medium text-[#513653]">
-              Anyway, I’m Tewobsta. I build software, study Artificial
-              Intelligence, and explore how code, data, and mathematics come
-              together to make intelligent systems.
+              Anyway, I’m Tewobsta. I build software and explore Artificial
+              Intelligence, with a growing interest in how code, data, and
+              mathematics come together to create intelligent systems.
             </span>
           </motion.p>
 
